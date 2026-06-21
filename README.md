@@ -134,15 +134,10 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 ## Roadmap / Future Improvements
 
-- [ ] **Database Integration** — Migrate from localStorage to PostgreSQL / MongoDB with Prisma ORM
-- [ ] **Authentication & Authorization** — JWT / NextAuth login for Patients, Doctors, and Admins
+- [ ] **Database Integration** — Migrate from localStorage
 - [ ] **Patient Dashboard** — Full health metrics visualization, medication adherence tracking
-- [ ] **Appointment Scheduling** — Calendar integration for booking and managing consultations
 - [ ] **Multi-language Support** — i18n for Arabic, English, and other languages
-- [ ] **PWA Support** — Offline access and installable mobile experience
-- [ ] **Email / SMS Notifications** — Automated reminders for medication and follow-ups
 - [ ] **PDF Report Generation** — Downloadable health summary reports
-- [ ] **Dark/Light Theme Toggle** — Full theme support beyond the current dark mode
 - [ ] **Unit & Integration Tests** — Jest + React Testing Library coverage
 
 ---
