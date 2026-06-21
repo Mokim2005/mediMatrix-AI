@@ -121,3 +121,13 @@
 .glow-green {
   box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
 }
+
+/* ── Global button text hover animation ───────────────────────────────────── */
+.btn-text {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover .btn-text,
+a:hover .btn-text {
+  opacity: 0.75;
+}

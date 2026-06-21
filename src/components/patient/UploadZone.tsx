@@ -185,7 +185,7 @@ export default function UploadZone({ onParsedRecord, onParseError }: UploadZoneP
                 className="flex items-center gap-1.5 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-1.5 text-xs font-semibold text-red-300 transition-colors hover:bg-red-500/20"
               >
                 <RefreshCw className="h-3.5 w-3.5" />
-                Retry
+                <span className="btn-text">Retry</span>
               </button>
             )}
             <button

@@ -112,11 +112,11 @@ export default function UploadPage() {
               {selectedPatient ? (
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4 text-[#10B981]" />
-                  <span className="text-[#E2E8F0]">{selectedPatient.name}</span>
-                  <span className="font-mono text-xs text-[#10B981]">({selectedPatient.id})</span>
+                  <span className="text-[#E2E8F0] btn-text">{selectedPatient.name}</span>
+                  <span className="font-mono text-xs text-[#10B981] btn-text">({selectedPatient.id})</span>
                 </div>
               ) : (
-                <span className="text-[#94A3B8]">Select a patient to save records for…</span>
+                <span className="text-[#94A3B8] btn-text">Select a patient to save records for…</span>
               )}
               <ChevronDown className="h-4 w-4 text-[#94A3B8]" />
             </button>
@@ -136,8 +136,8 @@ export default function UploadPage() {
                         }`}
                       >
                         <User className="h-4 w-4 shrink-0" />
-                        <span className="font-medium">{p.name}</span>
-                        <span className="ml-auto font-mono text-xs text-[#94A3B8]">{p.id}</span>
+                        <span className="font-medium btn-text">{p.name}</span>
+                        <span className="ml-auto font-mono text-xs text-[#94A3B8] btn-text">{p.id}</span>
                       </button>
                     ))
                   )}
@@ -290,14 +290,14 @@ export default function UploadPage() {
                 className="flex items-center gap-2 rounded-xl bg-[#10B981] px-6 py-2.5 text-sm font-bold text-[#020817] shadow-lg shadow-[#10B981]/20 transition-all hover:bg-[#0EA472] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Save className="h-4 w-4" />
-                {isSaving ? "Saving…" : "Save to Lifetime Record"}
+                <span className="btn-text">{isSaving ? "Saving…" : "Save to Lifetime Record"}</span>
               </button>
               <button
                 onClick={() => { setParsedRecord(null); setSaveError(null); }}
                 disabled={isSaving}
                 className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-5 py-2.5 text-sm font-medium text-[#94A3B8] transition-all hover:bg-white/[0.06] hover:text-[#E2E8F0] disabled:opacity-50"
               >
-                Upload Different File
+                <span className="btn-text">Upload Different File</span>
               </button>
             </div>
           </motion.div>

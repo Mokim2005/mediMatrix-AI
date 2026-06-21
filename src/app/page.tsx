@@ -110,7 +110,7 @@ export default function LandingPage() {
                   className="group flex items-center gap-2 rounded-xl bg-[#10B981] px-7 py-3.5 text-sm font-bold text-[#020817] shadow-lg shadow-[#10B981]/25 transition-colors hover:bg-[#0EA472]"
                 >
                   <UploadCloud className="h-4 w-4" />
-                  Access Patient Hub
+                  <span className="btn-text">Access Patient Hub</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </motion.div>
@@ -122,7 +122,7 @@ export default function LandingPage() {
                   className="group flex items-center gap-2 rounded-xl border border-white/[0.14] bg-white/[0.06] px-7 py-3.5 text-sm font-bold text-[#E2E8F0] backdrop-blur-sm transition-all hover:border-[#10B981]/40 hover:bg-white/[0.10]"
                 >
                   <Stethoscope className="h-4 w-4" />
-                  Enter Doctor Command Center
+                  <span className="btn-text">Enter Doctor Command Center</span>
                 </Link>
               </motion.div>
             </motion.div>
@@ -349,7 +349,7 @@ export default function LandingPage() {
                     }
                   >
                     <Icon className="h-4 w-4" />
-                    {label}
+                    <span className="btn-text">{label}</span>
                   </Link>
                 </motion.div>
               ))}

@@ -116,11 +116,11 @@ export default function PatientHomePage() {
               {selectedPatient ? (
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4 text-[#10B981]" />
-                  <span className="text-[#E2E8F0]">{selectedPatient.name}</span>
-                  <span className="font-mono text-xs text-[#10B981]">({selectedPatient.id})</span>
+                  <span className="text-[#E2E8F0] btn-text">{selectedPatient.name}</span>
+                  <span className="font-mono text-xs text-[#10B981] btn-text">({selectedPatient.id})</span>
                 </div>
               ) : (
-                <span className="text-[#94A3B8]">Select a patient to view their portal…</span>
+                <span className="text-[#94A3B8] btn-text">Select a patient to view their portal…</span>
               )}
               <ChevronDown className="h-4 w-4 text-[#94A3B8]" />
             </button>
@@ -140,8 +140,8 @@ export default function PatientHomePage() {
                         }`}
                       >
                         <User className="h-4 w-4 shrink-0" />
-                        <span className="font-medium">{p.name}</span>
-                        <span className="ml-auto font-mono text-xs text-[#94A3B8]">{p.id}</span>
+                        <span className="font-medium btn-text">{p.name}</span>
+                        <span className="ml-auto font-mono text-xs text-[#94A3B8] btn-text">{p.id}</span>
                       </button>
                     ))
                   )}

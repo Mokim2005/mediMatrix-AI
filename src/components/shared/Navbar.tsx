@@ -95,7 +95,7 @@ export default function Navbar() {
                 )}
               >
                 <Icon className="h-4 w-4" />
-                {label}
+                <span className="btn-text">{label}</span>
                 {isActive(href) && (
                   <motion.span
                     layoutId="nav-indicator"
@@ -174,7 +174,7 @@ export default function Navbar() {
                     )}
                   >
                     <Icon className="h-4 w-4" />
-                    {label}
+                    <span className="btn-text">{label}</span>
                     {isActive(href) && (
                       <span className="ml-auto h-1.5 w-1.5 rounded-full bg-[#10B981]" />
                     )}

@@ -49,7 +49,7 @@ export default function PatientSearch() {
           className="flex items-center gap-2 rounded-xl bg-[#10B981] px-4 py-2.5 text-sm font-semibold text-[#020817] shadow-lg shadow-[#10B981]/20 transition-all hover:bg-[#0EA472] active:scale-95"
         >
           <Search className="h-4 w-4" />
-          Search
+          <span className="btn-text">Search</span>
         </button>
       </div>
       {error && (

@@ -22,8 +22,8 @@ function ConfirmDialog({ message, onConfirm, onCancel }: { message: string; onCo
         </div>
         <p className="mb-6 text-sm text-[#94A3B8]">{message}</p>
         <div className="flex justify-end gap-3">
-          <button onClick={onCancel} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-sm font-medium text-[#94A3B8] hover:bg-white/[0.06] hover:text-[#E2E8F0] transition-colors">Cancel</button>
-          <button onClick={onConfirm} className="rounded-xl bg-red-500/80 px-4 py-2 text-sm font-bold text-white hover:bg-red-500 transition-colors">Confirm</button>
+          <button onClick={onCancel} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-sm font-medium text-[#94A3B8] hover:bg-white/[0.06] hover:text-[#E2E8F0] transition-colors"><span className="btn-text">Cancel</span></button>
+          <button onClick={onConfirm} className="rounded-xl bg-red-500/80 px-4 py-2 text-sm font-bold text-white hover:bg-red-500 transition-colors"><span className="btn-text">Confirm</span></button>
         </div>
       </div>
     </div>
@@ -53,11 +53,11 @@ function PatientRow({ patient, onToggle, onDelete }: { patient: Patient; onToggl
             className={cn("flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-semibold transition-colors",
               isActive ? "border-amber-500/20 bg-amber-500/10 text-amber-400 hover:bg-amber-500/20" : "border-[#10B981]/20 bg-[#10B981]/10 text-[#10B981] hover:bg-[#10B981]/20"
             )}>
-            {isActive ? <><ShieldOff className="h-3.5 w-3.5" /> Suspend</> : <><ShieldCheck className="h-3.5 w-3.5" /> Activate</>}
+            {isActive ? <><ShieldOff className="h-3.5 w-3.5" /> <span className="btn-text">Suspend</span></> : <><ShieldCheck className="h-3.5 w-3.5" /> <span className="btn-text">Activate</span></>}
           </button>
           <button onClick={() => onDelete(patient.id, patient.name)}
             className="flex items-center gap-1.5 rounded-lg border border-red-500/20 bg-red-500/10 px-2.5 py-1.5 text-xs font-semibold text-red-400 hover:bg-red-500/20 transition-colors">
-            <Trash2 className="h-3.5 w-3.5" /> Delete
+            <Trash2 className="h-3.5 w-3.5" /> <span className="btn-text">Delete</span>
           </button>
         </div>
       </td>
@@ -107,7 +107,7 @@ export default function UserTable() {
                 activeTab === tab ? "border-[#10B981] text-[#10B981]" : "border-transparent text-[#94A3B8] hover:text-[#E2E8F0]"
               )}>
               <Users className="h-4 w-4" />
-              {tab}
+              <span className="btn-text">{tab}</span>
               <span className="rounded-full border border-white/[0.08] bg-white/[0.04] px-2 py-0.5 text-xs font-bold text-[#94A3B8]">
                 {tab === "patients" ? patients.length : doctors.length}
               </span>
@@ -120,7 +120,7 @@ export default function UserTable() {
             className="flex items-center gap-2 rounded-xl bg-[#10B981] px-3 py-1.5 text-xs font-bold text-[#020817] transition-all hover:bg-[#0EA472]"
           >
             <UserPlus className="h-3.5 w-3.5" />
-            Register Doctor
+            <span className="btn-text">Register Doctor</span>
           </button>
         )}
       </div>
@@ -146,7 +146,7 @@ export default function UserTable() {
               ))}
             </div>
             <div className="mt-5 flex justify-end gap-3">
-              <button onClick={() => setShowRegister(false)} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-sm font-medium text-[#94A3B8] hover:bg-white/[0.06]">Cancel</button>
+              <button onClick={() => setShowRegister(false)} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-sm font-medium text-[#94A3B8] hover:bg-white/[0.06]"><span className="btn-text">Cancel</span></button>
               <button onClick={() => {
                 if (!regForm.name.trim()) { toast.error("Doctor name is required"); return; }
                 const nextId = `D-${String(1001 + doctors.length).padStart(4, "0")}`;
@@ -154,7 +154,7 @@ export default function UserTable() {
                 addAuditLog({ logId: `LOG-${Date.now()}`, timestamp: new Date().toISOString(), actionType: "MOCK_DATA_INJECTED", details: `Admin registered new doctor: ${regForm.name.trim()}` });
                 toast.success("Doctor registered successfully");
                 setRegForm({ name: "", specialty: "", email: "", contactNumber: "" }); setShowRegister(false);
-              }} className="rounded-xl bg-[#10B981] px-4 py-2 text-sm font-bold text-[#020817] hover:bg-[#0EA472]">Register</button>
+              }} className="rounded-xl bg-[#10B981] px-4 py-2 text-sm font-bold text-[#020817] hover:bg-[#0EA472]"><span className="btn-text">Register</span></button>
             </div>
           </div>
         </div>

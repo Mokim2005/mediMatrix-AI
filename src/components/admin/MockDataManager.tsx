@@ -25,8 +25,8 @@ function ConfirmDialog({ state, onConfirm, onCancel }: { state: DialogState; onC
         </div>
         <p className="mb-6 text-sm leading-relaxed text-[#94A3B8]">{state.message}</p>
         <div className="flex justify-end gap-3">
-          <button onClick={onCancel} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-sm font-medium text-[#94A3B8] hover:bg-white/[0.06] hover:text-[#E2E8F0] transition-colors">Cancel</button>
-          <button onClick={onConfirm} className="rounded-xl bg-[#10B981] px-4 py-2 text-sm font-bold text-[#020817] hover:bg-[#0EA472] transition-colors">Confirm</button>
+          <button onClick={onCancel} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-sm font-medium text-[#94A3B8] hover:bg-white/[0.06] hover:text-[#E2E8F0] transition-colors"><span className="btn-text">Cancel</span></button>
+          <button onClick={onConfirm} className="rounded-xl bg-[#10B981] px-4 py-2 text-sm font-bold text-[#020817] hover:bg-[#0EA472] transition-colors"><span className="btn-text">Confirm</span></button>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@ export default function MockDataManager() {
             className="mt-auto flex items-center gap-2 self-start rounded-xl bg-[#10B981] px-4 py-2.5 text-sm font-bold text-[#020817] shadow-lg shadow-[#10B981]/20 transition-all hover:bg-[#0EA472] active:scale-95"
           >
             <DatabaseZap className="h-4 w-4" />
-            Inject Mock Data
+            <span className="btn-text">Inject Mock Data</span>
           </button>
         </div>
 
@@ -96,7 +96,7 @@ export default function MockDataManager() {
             className="mt-auto flex items-center gap-2 self-start rounded-xl bg-red-500/80 px-4 py-2.5 text-sm font-bold text-white transition-all hover:bg-red-500 active:scale-95"
           >
             <Trash2 className="h-4 w-4" />
-            Clear System Data
+            <span className="btn-text">Clear System Data</span>
           </button>
         </div>
       </div>

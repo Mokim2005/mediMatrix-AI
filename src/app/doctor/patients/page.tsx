@@ -73,7 +73,7 @@ export default function DoctorPatientsPage() {
                         className="flex items-center gap-1.5 ml-auto rounded-lg bg-[#10B981] px-3 py-1.5 text-xs font-semibold text-[#020817] shadow-lg shadow-[#10B981]/10 transition-all hover:bg-[#0EA472] active:scale-95"
                       >
                         <LayoutDashboard className="h-3.5 w-3.5" />
-                        View Dashboard
+                        <span className="btn-text">View Dashboard</span>
                       </button>
                     </td>
                   </tr>

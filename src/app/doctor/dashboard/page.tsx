@@ -242,7 +242,7 @@ export default function DoctorDashboardPage() {
                             onClick={() => setModalRecord(record)}
                             className="rounded-lg border border-[#10B981]/20 bg-[#10B981]/10 px-3 py-1.5 text-xs font-semibold text-[#10B981] transition-colors hover:bg-[#10B981]/20"
                           >
-                            View Details
+                            <span className="btn-text">View Details</span>
                           </button>
                           <button
                             onClick={() => setExpandedRecord(isExpanded ? null : record.id)}
